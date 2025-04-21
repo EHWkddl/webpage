@@ -1,33 +1,16 @@
-document.getElementById('time').innerHTML = new Date().toLocaleString()
-
-function pink() {
-  document.body.style.backgroundColor = 'pink'
-}
-function lightblue() {
-  document.body.style.backgroundColor = 'lightblue'
-}
-function yellow() {
-  document.body.style.backgroundColor = 'lightyellow'
-}
-function reset() {
-  document.body.style.backgroundColor = 'linen'
+function showimage() {
+  document.getElementById('fig').src = 'image/01.jpg'
+  document.getElementById('desc').innerHTML = '<b>2025.02.07'
 }
 
-function showhtml() {
-  document.getElementById('fig').src = 'image/html5.png'
-  document.getElementById('desc').innerHTML =
-    '<b>HTML</b>은 구조적 웹문서를 작성하는데 사용하는 마크업 언어이다.'
-}
-function showcss() {
-  document.getElementById('fig').src = 'image/css3.png'
-  document.getElementById('desc').innerHTML =
-    '<b>CSS3</b>는 HTML 문서의 스타일을 지정하기 위한 언어이다.'
+function showimage2() {
+  document.getElementById('fig').src = 'image/02.jpg'
+  document.getElementById('desc').innerHTML = '<b>2024.04.07'
 }
 
-function showjs() {
-  document.getElementById('fig').src = 'image/javascript.png'
-  document.getElementById('desc').innerHTML =
-    '<b>Javascript</b>는 웹을 위한 프로그래밍 언어이며 웹문서에서 동작을 실행할 수 있게 한다. '
+function showimage3() {
+  document.getElementById('fig').src = 'image/03.jpg'
+  document.getElementById('desc').innerHTML = '<b>2023.07.18'
 }
 
 function hide() {

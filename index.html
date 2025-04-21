@@ -3,67 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HCJ</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>⋰˚ Min ୨୧</title>
+    <link rel="stylesheet" href="./css/main-style.css" />
   </head>
+
   <body>
     <!-- 메뉴 -->
     <nav class="navbar">
       <div class="container">
-        <div class="logo">WebDemo</div>
+        <div id="branding">
+          <div class="logo">୨୧ MIN ୨୧</div>
+        </div>
         <ul class="nav">
           <li><a href="/">Home</a></li>
-          <li><a href="/about.html">About </a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/secon.html">Secon</a></li>
+          <li><a href="/portfolio.html">Portfolio</a></li>
           <li><a href="/team.html">Team</a></li>
         </ul>
       </div>
     </nav>
 
     <!-- 메인섹션 -->
-    <section class="main">
-      <div class="container"></div>
-
-      <h1>WEB DEMO HOMEPAGE ୨୧</h1>
-      <h2>웹 프로그래밍 - Web Programming</h2>
-
-      <h3>
-        웹 개발자를 위한 온라인 매뉴얼:
-        <a href="https://www.w3schools.com">W3Schools : 웹프로그래밍 매뉴얼</a>
-      </h3>
-
-      <p>
-        웹프로그래밍의 3가지 요소:
-        <a href="https://www.w3schools.com/html/default.asp">HTML5</a> |
-        <a href="https://www.w3schools.com/css/default.asp">CSS3</a> |
-        <a href="https://www.w3schools.com/js/default.asp">Javascript</a>
-      </p>
-
-      <p>현재시각: <span id="time"></span></p>
-
-      <hr />
-      <p>
-        배경색 변경하기:
-        <button onclick="pink()">Pink</button>
-        <button onclick="lightblue()">litghtblue</button>
-        <button onclick="yellow()">yellow</button>
-        <button onclick="reset()">Reset</button>
-      </p>
-
-      <p>
-        배워봅시다:
-        <button onmouseover="showhtml()" onmouseout="hide()">HTML5</button>
-        <button onmouseover="showcss()" onmouseout="hide()">CSS3</button>
-        <button onmouseover="showjs()" onmouseout="hide()">Javascript</button>
-      </p>
-
-      <hr />
-
-      <div>
-        <img id="fig" height="200px" />
-        <p id="desc"></p>
+    <section class="main hero">
+      <div class="hero-content">
+        <div class="animation">
+          <h1>Hyomin's WEB HOMEPAGE ୨୧</h1>
+          <a href="https://github.com/EHWkddl" class="hero-btn"
+            >LEARN MORE (Github)</a
+          >
+        </div>
       </div>
     </section>
+
+    <section class="main">
+      <div class="container about">
+        <img src="image/hm.jpg" alt="증명사진" width="50%" />
+
+        <div class="about-text">
+          <h1>✩⡱ About Me ⋰˚☆</h1>
+          <hr />
+          <h3>=͟͟͞͞ ͟͟͞͞𖤐 중부대학교 정보보호학전공 24학번 정효민</h3>
+          <p>ꔫ 이름 - 정효민(鄭孝珉)</p>
+          <p>ꔫ 생일 - 2005.10.14 21세</p>
+          <p>ꔫ 학번 - 92410914</p>
+          <p>ꔫ E-mail - cherish_504@naver.com</p>
+          <p>ꔫ MBTI - INFP</p>
+          <p>ꔫ 관심 분야 - 프론트엔드 개발</p>
+          <p>
+            ꔫ 취미 - 필기 정리, 사진 찍기 <br />
+            <button onmouseover="showimage()" onmouseout="hide()">
+              사진 1
+            </button>
+            <button onmouseover="showimage2()" onmouseout="hide()">
+              사진 2
+            </button>
+            <button onmouseover="showimage3()" onmouseout="hide()">
+              사진 3
+            </button>
+          </p>
+
+          <!-- 사진 보여주는 곳 -->
+          <div class="photo-view">
+            <img id="fig" src="" alt="" width="300px" />
+            <p id="desc"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Copyright &copy; 2025, 중부대학교 정보보호학과 정효민</p>
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>
