@@ -1,4 +1,6 @@
-/* 공통 초기화 */
+/* =================================================
+    기본
+================================================= */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,17 +10,24 @@
 body {
   background: radial-gradient(circle, #c1e2be 0%, #c8e3cf 50%, #ffffff 100%);
   color: #333;
+  font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
   font-size: 16px;
-  line-height: 1.5;
-  padding-top: 80px;
+  line-height: 1.6;
 }
 
 ul {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* =================================================
+    네비게이션 바
+================================================= */
 .navbar {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   color: black;
   height: 60px;
   position: fixed;
@@ -27,251 +36,317 @@ ul {
   left: 0;
   z-index: 1000;
   backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .navbar .container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   padding: 0 30px;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.navbar ul {
+.navbar .nav {
   display: flex;
-  flex-direction: row;
 }
 
-.navbar ul li {
-  margin-left: 20px;
+.navbar .nav li {
+  margin-left: 25px;
 }
 
 .navbar .logo {
-  font-size: x-large;
+  font-size: 22px;
   font-weight: bold;
 }
 
 .navbar a {
-  color: black;
-  text-decoration: none;
-  font-size: 18px;
+  color: #333;
+  font-size: 17px;
   font-weight: bold;
+  padding: 5px 0;
+  transition: color 0.3s;
 }
 
 .navbar a:hover {
-  border-bottom: 2px #fff solid;
-  color: #ddd;
+  color: #006400;
 }
 
-/* 테이블 스타일 */
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+/* =================================================
+    메인 콘텐츠 레이아웃
+================================================= */
+.grid {
+  /* 네비바 높이만큼 상단 여백을 주어 콘텐츠가 가려지지 않게 함 */
+  padding: 100px 20px 40px 20px;
 }
 
-td,
-th {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 17px;
+.content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto; /* 상단 마진 제거 */
+  padding: 40px 50px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
-tr:nth-child(even) {
-  background-color: #f3fff6;
-}
-
-.teamtable h2 {
-  text-align: center;
-}
-
-.go {
-  background-color: #ffffff;
-  padding: 7px;
-  border-radius: 15px;
-  border-width: 1px;
-}
-
-.ago {
-  color: black;
-  font-weight: bold;
-}
-
-.ago:hover {
-  color: #94ac8a;
-}
-
-/* Footer 스타일 */
-footer {
-  padding: 20px 0;
-  margin-top: 80px;
-  color: #222;
-  background-color: #fcfcfc;
-  border-top: 1px solid #ddd;
-  text-align: center;
-  font-size: 14px;
-}
-
-/* 버튼 */
-button {
-  background-color: lightgrey;
-  padding: 5px 10px;
-  margin: 5px 10px;
-  font-size: 14px;
-  font-weight: bold;
-  border-width: 0;
-  border-radius: 15px;
-  cursor: pointer;
-}
-
-/* 폼 */
-#formtest {
-  background-color: #94ac8a;
-  padding: 15px;
-  color: white;
-}
-
-#formtest h1 {
-  text-align: center;
-}
-
-#formtest form {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.button_1 {
-  border-radius: 10px;
-  height: 38px;
-  background-color: #7696ae;
-  border: 0;
-  padding: 0 20px;
-  color: white;
-}
-
-/* 제목 및 그리드 */
 .web-title {
   text-align: center;
-  margin: 15px;
+  margin-bottom: 50px;
 }
 
-.grid h1 {
-  text-align: center;
-  font-size: 40px;
+.web-title h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
-.grid h3,
-.grid p {
-  text-align: center;
+.web-title h3 {
+  font-size: 1.3em;
+  font-weight: normal;
+  color: #555;
+  margin-bottom: 15px;
 }
 
-.grid-container {
-  margin-bottom: 80px;
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  padding: 20px;
-}
-
-.grid-item {
-  border-radius: 20px;
-  border: #e2e1e1 solid 2px;
-  background-color: #e7e6e6;
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 40px;
-  width: 60%;
-}
-
-.demo {
+.web-title p {
   max-width: 600px;
-  width: 70%;
-  height: auto;
-  align-items: center;
+  margin: 0 auto;
+  color: #666;
 }
 
-.web {
-  color: black;
-  font-weight: bold;
+/* =================================================
+    프로젝트 (Grid 레이아웃)
+================================================= */
+.project-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+  text-align: left;
 }
 
-.web:hover {
+.detail-item {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.detail-item h4 {
+  color: #006400;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  border-left: 4px solid #b2deac;
+  padding-left: 10px;
+}
+
+.detail-item ul {
+  padding-left: 10px;
+}
+
+.detail-item ul li {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.project-link-button {
+  text-align: center;
+  margin: 40px 0 60px 0;
+}
+
+.project-link-button .web {
+  background: #94ac8a;
   color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  display: inline-block;
+}
+
+.project-link-button .web:hover {
+  background: #7c9172;
+  transform: scale(1.05);
+}
+
+/* =================================================
+    팀 & 팀원 박스
+================================================= */
+.team-story,
+.team-members-container {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.team-story h2,
+.team-members-container h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.team-story {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  background: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.team-story p {
+  text-align: center;
+  color: #555;
+  line-height: 1.8;
+}
+
+.team-members-container {
+  margin-top: 80px;
+}
+
+.team-members-container h2 {
+  margin-bottom: 40px;
+}
+
+.team-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.team-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 30px;
+  width: 320px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.team-card h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1.4em;
+}
+
+.team-card .role {
+  color: #008756;
+  font-style: italic;
+  margin-bottom: 15px;
   font-weight: bold;
 }
 
-/* 애니메이션 */
-.animation {
-  animation-duration: 3s;
-  animation-name: slidein;
+.team-card .bio {
+  font-size: 0.95em;
+  flex-grow: 1;
+  margin-bottom: 25px;
+  color: #555;
+  line-height: 1.6;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-
-/* 트랜지션 */
-.ggo {
-  margin-top: 60px;
-  position: relative;
-  transition-duration: 4s;
-  font-size: 14px;
-  padding: 10px 15px;
+.social-links .ago {
+  display: inline-block;
+  background-color: #555;
+  color: white;
+  padding: 10px 20px;
   border-radius: 8px;
-  border-width: 0;
-  background-color: #b2deac;
-}
-ㄴ .ggo:hover {
-  transition-property: font-size;
-  transition-duration: 4s;
-  font-size: 36px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-/* 미디어 쿼리 */
+.social-links .ago:hover {
+  background-color: #333;
+}
+
+/* =================================================
+    푸터
+================================================= */
+footer {
+  padding: 30px 0;
+  margin-top: 80px;
+  color: #555;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 14px;
+}
+
+/* =================================================
+    미디어 쿼리
+================================================= */
+@media (max-width: 992px) {
+  .content-wrapper {
+    padding: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .project-details {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 768px) {
-  .navbar .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar ul li {
-    margin: 10px 0;
+  /* 모바일 화면에서 네비바가 콘텐츠를 가리지 않도록 .grid의 상단 패딩 제거 */
+  .grid {
+    padding-top: 20px;
   }
 
   .navbar {
+    /* 요청하신 대로 네비바를 일반 블록 요소처럼 변경 */
+    background-color: rgb(255, 255, 255);
     height: auto;
+    position: static; /* fixed 해제 */
   }
 
-  #formtest button,
-  .quote button {
-    display: block;
-    width: 100%;
+  .navbar .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0; /* 내부 상하 여백 */
   }
 
-  .grid-item {
-    width: 80%;
+  .navbar .nav {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px; /* 로고와 메뉴 사이 간격 */
   }
 
-  footer {
-    padding: 10px;
+  .navbar .nav li {
+    margin: 10px 0;
+  }
+
+  .content-wrapper {
     margin-top: 20px;
-    font-size: 13px;
+  }
+
+  .project-details {
+    grid-template-columns: 1fr;
+  }
+
+  .web-title h1 {
+    font-size: 2em;
   }
 }
